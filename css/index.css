@@ -1,0 +1,298 @@
+body {
+  background-color: #e5e5e5; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-areas: "navigation navigation navigation navigation navigation"
+                       "body body body body body"
+                       "footer footer footer footer footer"
+                       "copyright copyright copyright copyright copyright";
+  grid-template-rows: 70px 830px 372px 70px;
+  grid-template-columns: auto auto auto auto auto;
+  max-width: 1440px;/*1280px;*/
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 0px solid grey;
+}
+
+.navigation {
+  grid-area: navigation;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 140px;
+  font-size: 1em;
+}
+
+.navigationMenu {
+  width: 100%;
+  padding-right: 22px;
+  text-align: right;
+}
+
+.navigationMenu__li {
+  display: inline;
+  margin: 0px 5px;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navigationMenu__img {
+  margin-left: 5px;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1.5px solid #BC9CFF;
+  border-top: 1.5px solid #BC9CFF;
+  border-bottom: 1.5px solid #8BA4F9;
+  border: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: white;
+  border-radius: 22px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-entry {
+  background: white;
+  color: #BC9CFF;
+}
+
+/* ------ logotip ------ */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img:first-child {
+  margin-right: 10px;
+}
+/* -------------------- */
+
+.body {
+  grid-area: body;
+  position: relative;
+  background-image: url('../img/main-background.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.control {
+  position: absolute;
+  top: 70px;
+  left: 140px;
+  width: 380px;
+  height: 374px;
+  padding: 30px 30px;
+  padding-top: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.control__h3 {
+  margin: 0px;
+  padding: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: 'Quicksand';
+  border: 0px solid grey;
+}
+
+.control__btn {
+  width: 100%;
+  margin: 0px;
+  margin-top: 31px;
+}
+
+.datePeriod {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---- Input element ---- */
+.inputField {
+  display: grid;
+  grid-template-areas: "title title" 
+                       "input button";
+  grid-template-rows: 20px auto;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.inputField__date {
+  display: grid;
+  grid-template-areas: "title title" 
+                       "input button";
+  grid-template-rows: 20px auto;
+  grid-template-columns: 106px 44px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.inputFiled__select {
+  display: grid;
+  grid-template-areas: "title title" 
+                       "input button";
+  grid-template-rows: 20px auto;
+  grid-template-columns: 276px 44px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.inputField__label {
+  grid-area: title;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.inputField__input {
+  grid-area: input;
+  padding: 9px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-right: 0px;
+  box-sizing: border-box;
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.inputField__btn {
+  grid-area: button;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-left: 0px;
+  background-image: url('../img/arrow-drop.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0px 4px 4px 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* ----------------------- */
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  padding: 0px 140px;
+  padding-top: 100px;
+  font-size: 1em;
+  color: rgba(31, 32, 65, 0.75);
+  border: 0px solid grey;
+}
+
+.footerBlock:first-child, .footerBlock:last-child {
+  width: 260px;
+}
+
+.footerBlock_ul {
+  padding: 0px;
+}
+
+.footerBlock__li {
+  list-style: none;
+  margin: 15px 0px;
+}
+
+.footerBlock__li:first-child {
+  font-weight: bold;
+  color: #1F2041;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-top: 4px;
+  color: #1F2041;
+}
+
+.footerBlock__p {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: row;
+}
+
+.subscription__input {
+  width: 216px;
+  height: 44px;
+  padding-left: 15px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-right: 0px;
+  box-sizing: border-box;
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  color: rgba(31, 32, 65, 0.25);
+}
+.subscription__btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-left: 0px;
+  background-image: url('../img/arrow-right.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0px 4px 4px 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.copyright {
+  grid-area: copyright;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 140px;
+  font-size: 1em;
+  color: rgba(31, 32, 65, 0.75);
+  border-top: 1px solid grey;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social__img {
+  width: 24px;
+  height: 24px;
+}
+
+.social__img {
+  margin: 0px 20px;
+}
+.social__img:first-child, .social__img:last-child {
+  margin: 0px;
+}
